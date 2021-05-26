@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 25, 2021 at 12:14 AM
+-- Generation Time: May 26, 2021 at 07:06 PM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.3.12
 
@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `tblstudents` (
+  `student_id` int(10) NOT NULL,
   `fname` varchar(30) NOT NULL,
   `lname` varchar(30) NOT NULL,
   `uname` varchar(20) NOT NULL,
@@ -42,8 +43,28 @@ CREATE TABLE `tblstudents` (
 -- Dumping data for table `tblstudents`
 --
 
-INSERT INTO `tblstudents` (`fname`, `lname`, `uname`, `upassword`, `program`, `email`, `contact`) VALUES
-('Tamanda', 'Mgwalima', 'huku', 'huku', 'MTech in Cloud Computing', 't34mgwalima@gmail.com', '0779054891');
+INSERT INTO `tblstudents` (`student_id`, `fname`, `lname`, `uname`, `upassword`, `program`, `email`, `contact`) VALUES
+(1, 'Tamanda', 'Mgwalima', 'huku', 'huku', 'MTech in Cloud Computing', 't34mgwalima@gmail.com', '0779054891');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `tblstudents`
+--
+ALTER TABLE `tblstudents`
+  ADD PRIMARY KEY (`student_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `tblstudents`
+--
+ALTER TABLE `tblstudents`
+  MODIFY `student_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
