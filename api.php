@@ -1,6 +1,8 @@
 <?php
+// required header
 header("Content-Type:application/json");
 if (isset($_GET['student_id']) && $_GET['student_id']!="") {
+	// get database connection
 	include('connection.php');
 	$student_id = $_GET['student_id'];
 	$result = mysqli_query($con,
@@ -16,6 +18,7 @@ if (isset($_GET['student_id']) && $_GET['student_id']!="") {
 	response($student_id, $fname, $lname,$uname,$email,$program,$contact);
 	mysqli_close($con);
 	}else{
+		// tell the user that the record does not exist
 		response(NULL, NULL, 200,"No Record Found");
 		}
 }else{
