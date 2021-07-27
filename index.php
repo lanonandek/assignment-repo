@@ -1,5 +1,6 @@
 <html>
-<!-- Latest compiled and minified CSS -->
+<!-- Code by Tamanda Mgwalima. Client.php renamed to index.php to make default path in azure -->
+	<!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
 <!-- jQuery library -->
