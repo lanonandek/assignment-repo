@@ -1,4 +1,6 @@
 <?php
+//This script will accept the GET request and return output in the JSON format.
+//you can get the transaction information by browsing the following URL: http://localhost/rest/api.php?student_id=1
 // required header
 header("Content-Type:application/json");
 if (isset($_GET['student_id']) && $_GET['student_id']!="") {
@@ -24,7 +26,7 @@ if (isset($_GET['student_id']) && $_GET['student_id']!="") {
 }else{
 	response(NULL, NULL, 400,"Invalid Request");
 	}
-
+//function response() to get single student record requested by GET http request
 function response($student_id,$fname,$lname,$uname,$email,$program,$contact){
 	$response['student_id'] = $student_id;
 	$response['fname'] = $fname;
